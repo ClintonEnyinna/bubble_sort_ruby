@@ -20,7 +20,8 @@ print sorted_arr
 print "\n"
 
 def bubble_sort_by(arr)
-  return "Error no block given" unless block_given?
+  return 'Error no block given' unless block_given?
+
   counter = arr.length - 1
   while counter.positive?
     (0...counter).each do |i|
@@ -35,5 +36,5 @@ def bubble_sort_by(arr)
   arr
 end
 
-sorted_arr_of_str = bubble_sort_by(["hi", "hello", "hey"]) { |left, right| left.length - right.length }
+sorted_arr_of_str = bubble_sort_by(%w[hi hello hey]) { |left, right| left.length - right.length }
 print sorted_arr_of_str
